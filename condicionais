@@ -1,0 +1,20 @@
+let fruta = prompt ("Escolha uma fruta")
+let preco
+switch (fruta) {
+case "Banana":
+preco = 2.5
+break;
+
+case "Goiaba":
+preco = 3.0
+break;
+
+case "Uva":
+preco = 0.30
+break;
+
+case "Abacaxi":
+preco = 5.5
+break;
+}
+console.log("O preço da banana" , banana , é , "R$ 2.5")
