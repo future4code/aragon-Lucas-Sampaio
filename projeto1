@@ -1,0 +1,89 @@
+// EXERCÍCIO DE ESCRITA
+
+// Exercício 1
+// let nome;
+// let idade;
+
+// console.log(nome);
+// console.log(idade);
+
+// nome = prompt("Lucas");
+// idade = prompt("22");
+
+// console.log(Lucas, 22)
+
+// Exercício 2
+// const pergunta1 = "Você está usando uma camisa amarela?";
+// const pergunta2 = "Você gosta de pizza?";
+// const pergunta3 = "Você é estudante na Labenu?";
+
+// const resposta1 = prompt(pergunta1);
+// const resposta2 = prompt(pergunta2);
+// const resposta3 = prompt(pergunta3);
+
+// console.log(pergunta1, "Sim, estou!");
+// console.log(pergunta2, "Sim, até demais!");
+// console.log(pergunta3, "Sim, com muito orgulho!");
+
+// Exercício 3
+// let a = 10;
+// let b = 25;
+// let c;
+
+// c = a; // c = 10
+// a = b; // a = 25
+// b = c; // b = 10
+
+// console.log("a", a);
+// console.log("b", b);
+
+// EXERCICIOS DE ESCRITA DE CODIGO
+
+// EXERCICIO 1
+
+// O e-mail emailDoUsuario foi cadastrado com sucesso. Seja bem-vinda(o), nomeDoUsuario!
+
+// const emailDoUsuario = prompt("Qual seu email?")
+// const nomeDoUsuario = prompt("Qual seu nome?")
+
+// console.log(`O email ${lucasaraujosampaio@gmail.com} foi cadastrado com sucesso. Seja bem-vindo(a) ${lucas}`)
+
+// EXERCICIO 2
+
+const comidasPreferidas = [
+  "Hamburguer",
+  "Batata frita",
+  "Feijoada",
+  "Pao de queijo",
+  "Pizza"
+];
+// a. console.log(comidasPreferidas)
+
+// b.
+// console.log("Essas são as minhas comidas preferidas: ")
+// console.log(Hamburguer)
+// console.log(Batata frita)
+// console.log(Feijoada)
+// console.log(Pao de queijo)
+// console.log(Pizza)
+
+// c.
+// const novaComida = prompt("Diga uma comida que voce gosta!")
+// comidasPreferidas[1] = "Frango"
+// console.log(Frango)
+
+// EXERCÍCIO 3
+
+// 1.
+
+// const minhaFrase = "Eu amo minha namorada!"
+// console.log(Eu amo minha namorada!)
+
+// 2.
+
+const frutas = ["Banana", "Uva", "Abacaxi", "Laranja", "Maça"];
+
+const indexAbabaxi = frutas.indexOf("Abacaxi");
+const tamanhoArray = frutas.length;
+
+console.log("Index abacaxi: ", indexAbabaxi, "tamanho do array:", tamanhoArray);
