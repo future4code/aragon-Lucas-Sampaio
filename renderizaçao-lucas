@@ -1,0 +1,31 @@
+@@ -4,19 +4,14 @@ import Cart from './Cart';
+import {PagProdutos} from './PagProdutos'
+@@ -1,5 +1,7 @@
+import PageInicial from './PageInicial'
+import { PagProdutos } from './PagProdutos'
+@@ -63,7 +65,28 @@ const IconeMenu = styled.img`
+
+state = {
+        produto: ""
+      };
+
+      irParaProduto = () => {
+        this.setState({ produto: "produtos" });
+        console.log('To rolando')
+      }
+      
+      let secao;
+
+        switch (this.state.produto) {
+          case "produtos":
+            secao = <PageInicial />;
+            break;
+             default:
+            secao = <p>Nenhuma seção selecionada</p>;
+        }
+        
+      @@ -73,12 +96,13 @@ export default class MenuNav extends React.Component {
+      
+      <button onClick={this.irParaProduto}>produtos</button>
+
+      <li><a href="../Cart.jsx">Logout</a></li>
