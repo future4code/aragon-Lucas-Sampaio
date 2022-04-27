@@ -1,0 +1,56 @@
+import React from 'react'
+import styled from 'styled-components'
+import './styles.css'
+
+const TarefaList = styled.ul`
+  padding: 0;
+  width: 200px;
+`
+
+const Tarefa = styled.li`
+  text-align: left;
+  text-decoration: ${({ completa }) => (completa ? 'line-through' : 'none')};
+`
+
+const InputsContainer = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+`
+
+class App extends React.Component {
+  state = {
+    tarefas: [
+      {
+        id: Date.now(),
+        texto: 'Realizar o WarmUp',
+        completa: true
+      },
+      {
+        id: Date.now(),
+        texto: 'Realizar o Exercício do Dia',
+        completa: false
+      }
+    ],
+    inputValue: '',
+    filtro: ''
+  }
+
+  componentDidUpdate() {
+
+  };
+
+  componentDidMount() {
+
+  };
+
+  onChangeInput = (event) => {
+    this.setState({ inputValue: event.target.value })
+  }
+
+  criaTarefa = () => {
+    const novaTarefaRenderizada = {
+      id: Date.now(),
+      texto: this.state.inputValue,
+      completa: false
+    }
