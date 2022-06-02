@@ -58,7 +58,7 @@ if (numero % 2 === 0) {
 // console.log(mensagem)
 
 // a) O que a primeira linha está fazendo?
-// esta criando uma vareavel e pedindo numero no prompt para perguntar ao usuario o valor x.
+// esta criando uma variavel e pedindo numero no prompt para perguntar ao usuario o valor x.
 
 // b) Considere um usuário digitou o número 10. Qual será a mensagem do terminal? E se fosse o número -10?
 // msg do terminal nao esté definida , se fosse -10 ele nao entra , nao tem uma condição para ele entrar !
@@ -140,61 +140,3 @@ let idadeUser = function(idade){
         }
     }
     filmeUser()
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// a) Para que serve o código acima?
-// para otimizar as tarefas facilitando a escolha da fruta + valor 
-// b) Qual será a mensagem impressa no console, se o valor de fruta for "Maçã"?
-// O preço da fruta  maçã  é  R$  5
-//c) Considere que um usuário queira comprar uma Pêra, qual seria a mensagem impressa no console se retirássemos o break que está logo acima do default (o break indicado pelo comentário "BREAK PARA O ITEM c.")?
-// se eu tirar o break ele vai parar no "JS" Já em outras linguagens ele vai continuar lendo !
-
-3. Leia o código abaixo:
-// const numero = Number(prompt("Digite o primeiro número."))
-
-
-
-
-
-
-
-
-a) O que a primeira linha está fazendo?
-// esta criando uma vareavel e pedindo numero no prompt para perguntar ao usuario o valor x.
-
-// b) Considere um usuário digitou o número 10. Qual será a mensagem do terminal? E se fosse o número -10?
-// msg do terminal nao esté definida , se fosse -10 ele nao entra , nao tem uma condição para ele entrar !
-
-// c) Haverá algum erro no console? Justifique usando os conceitos de bloco ou escopo.
-// precisa ser adc um caso para condição 
-
-
-// Exercícios de escrita de código
