@@ -61,4 +61,3 @@ app.post('/users', (req: Request, res: Response) => {
       console.error(`Failure upon starting server.`);
     }
   });;
-
