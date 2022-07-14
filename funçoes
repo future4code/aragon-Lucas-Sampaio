@@ -1,0 +1,23 @@
+// Retângulo 1
+const altura1 = 6
+const largura1 = 3
+const area1 = largura1 * altura1
+console.log(area1)
+
+// Retângulo 2 
+const altura2 = 4
+const largura2 = 5
+const area2 = largura2 * altura2 
+console.log(area2)
+
+// Retângulo 3
+const altura3 = 6
+const largura3 = 2
+const area3 = largura3 * altura3
+console.log(area3)
+
+// Retângulo 4
+const altura4 = 8
+const largura4 = 7
+const area4 = largura4 * altura4
+console.log(area4)
