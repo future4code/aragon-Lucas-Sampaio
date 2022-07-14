@@ -1,80 +1,63 @@
-import express, { Request, Response } from "express";
-import cors from "cors";
+import  { Request, Response } from "express";
+import  express  from "express";
+import cors from "cors"
+import { AddressInfo } from "net";
+import { users,ContaUsuario,Extrato,Info} from "./data";
+import{v4 as generateId} from "uuid"
 
 const app = express();
-
 app.use(express.json());
-app.use(cors());
+app.use(cors())
 
-// Exercício 1
-app.get("/", (req: Request, res: Response) => {
-  res.send("Funcionou!");
-})
+app.post('/users', (req: Request, res: Response) => {
+    let errorCode = 500
+    try {
+      const { name,cpf,dataNascimento } = req.body
 
-// Exercício 2
-type user = {
-  id: string | number,
-  name: string,
-  phone: number,
-  email: string,
-  website: string
-}
+      if(dataNascimento >= 18){
+        errorCode = 400
+        throw new Error("usuario menor de 18");
+      }
 
-// Exercício 3
-const users: Array<user> = [
-  {
-    id: 1,
-    name: "Tchumi",
-    phone: 31995961111,
-    email: "batatinha@gmail.com",
-    website: "tchumi.com"
-  },
-  {
-    id: 2,
-    name: "Mia",
-    phone: 31995962222,
-    email: "mia@gmail.com",
-    website: "mia_linda.com"
-  },
-  {
-    id: 3,
-    name: "Baguera",
-    phone: 31995963333,
-    email: "panterinha@gmail.com",
-    website: "baguera.com",
-  },
-  {
-    id: 4,
-    name: "Tom Hanks",
-    phone: 31995964444,
-    email: "tonico_lindo@gmail.com",
-    website: "tonico.com"
-  },
-  {
-    id: 5,
-    name: "Whiskas",
-    phone: 31995965555,
-    email: "whiskas@gmail.com",
-    website: "whiskas.com"
-  },
-  {
-    id: 6,
-    name: "Frajola",
-    phone: 31995936666,
-    email: "frajolinha@gmail.com",
-    website: "frajolinha.com"
-  },
-]
+      if (!name || !cpf || !dataNascimento ) {
+        errorCode = 422
+        throw new Error("Faltam parâmetros a serem paddos no body");
+      }
 
-// Exercício 4
-app.get("/users", (req: Request, res: Response) => {
-  res.send(users);
-});
+      const newUser: ContaUsuario = {
+        id: generateId(),
+        name,
+        cpf,
+        dataNascimento
+      }
 
-// Exercício 5
-type post = {
-  id: string | number,
-  title: string,
-  body: string,
-  userId: string | number
-}
+      users.push(newUser)
+      res.status(201).send(users)
+
+    } catch (error: any) {
+      res.status(errorCode).send(error.message)
+    }
+  })
+
+
+  app.get('/users', (req: Request, res: Response) => {
+
+    try {
+
+        res.status(200).send(users)
+
+    }
+    catch (error) {
+        res.status(400).end("Usuários não encontrados")
+    }
+  })
+
+
+  const server = app.listen(process.env.PORT || 30003, () => {
+    if (server) {
+      const address = server.address() as AddressInfo;
+      console.log(`Server is running in http://localhost:${address.port}`);
+    } else {
+      console.error(`Failure upon starting server.`);
+    }
+  });;
